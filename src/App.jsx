@@ -18,6 +18,7 @@ import {
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+const BASE_URL = import.meta.env.BASE_URL;
 
 const projects = [
   {
@@ -110,14 +111,14 @@ const links = {
   email: "aseshadri39@gatech.edu",
   linkedin: "https://www.linkedin.com/in/anirudhsesh/",
   github: "https://github.com/anirudh-seshadri",
-  portfolio: "https://YOUR-DEPLOYED-SITE-HERE.com",
-  resume: "/resume.pdf",
+  portfolio: `${BASE_URL}`,
+  resume: `${BASE_URL}/resume.pdf`,
 };
 
 const detailedProjects = [
   {
     title: "RB Logbook Web",
-    image: "/rb-logbook.png",
+    image: `${BASE_URL}rb-logbook.png`,
     imageAlt: "RB Logbook Web application image",
     fit: "contain",
     paragraphs: [
@@ -134,7 +135,7 @@ const detailedProjects = [
   },
   {
     title: "Brain Lab BCI Project",
-    image: "/brain-lab.jpg",
+    image: `${BASE_URL}brain-lab.jpg`,
     imageAlt: "Brain Lab BCI project image",
     imagePosition: "object-center",
     fit: "cover",
@@ -152,7 +153,7 @@ const detailedProjects = [
   },
   {
     title: "Dynamic Compiler Project",
-    image: "/dynamic-compiler.png",
+    image: `${BASE_URL}dynamic-compiler.png`,
     imageAlt: "Dynamic Compiler image",
     fit: "contain",
     paragraphs: [
@@ -242,7 +243,7 @@ export default function PortfolioSite() {
               <div className="bg-slate-950 p-8 text-white">
                 <div className="mb-8 flex flex-col items-center text-center">
                   <img
-                    src="/headshot.jpeg"
+                    src={`${BASE_URL}headshot.jpeg`}
                     alt="Anirudh Seshadri headshot"
                     className="mb-5 h-32 w-32 rounded-full object-cover border-4 border-white/20 shadow-lg"
                   />
