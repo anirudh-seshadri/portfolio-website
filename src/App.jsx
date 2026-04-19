@@ -172,6 +172,7 @@ const detailedProjects = [
   title: "LED Pattern Controller (ESP32)",
   image: `${BASE_URL}esp32-led-project.jpg`, 
   imageAlt: "ESP32 LED breadboard project",
+  customImageClass: "max-w-lg",
   fit: "contain",
   paragraphs: [
     "This project was focused on building a simple LED pattern controller using an ESP32 microcontroller and a breadboard-based circuit. The goal was to control multiple LEDs and switch between different lighting patterns using button input, allowing me to explore how embedded systems combine software logic with physical hardware. The system was designed to implement patterns such as blinking, chasing, and sequential filling, with each pattern triggered through user interaction.",
@@ -399,8 +400,8 @@ export default function PortfolioSite() {
                     className={`w-full ${
                       project.fit === "cover"
                         ? `h-80 md:h-96 object-cover ${project.imagePosition || "object-center"}`
-                        : "max-w-4xl mx-auto object-contain"
-                    } rounded-2xl border border-slate-200 bg-slate-50`}
+                        : `${project.customImageClass || "max-w-4xl"} mx-auto object-contain`
+                    } rounded-2xl border border-slate-200 bg-slate-50`}   
                   />
                     <div className="space-y-4 text-base leading-8 text-slate-700">
                       {project.paragraphs.map((paragraph, idx) => (
