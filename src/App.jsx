@@ -168,6 +168,23 @@ const detailedProjects = [
     "Overall, this project enhanced my understanding of computer architecture, compiler design, and system security. It also helped me develop the ability to connect theoretical concepts with practical engineering applications. Working on this project gave me a clearer view of how low-level system design choices can significantly affect security and performance. This experience has shaped how I tackle system-level challenges and reinforced my interest in building secure and efficient computing systems, especially in areas that need strong guarantees about correctness and protection against threats."
     ]
   },
+  {
+  title: "LED Pattern Controller (ESP32)",
+  image: `${BASE_URL}esp32-led-project.jpg`, 
+  imageAlt: "ESP32 LED breadboard project",
+  fit: "contain",
+  paragraphs: [
+    "This project was focused on building a simple LED pattern controller using an ESP32 microcontroller and a breadboard-based circuit. The goal was to control multiple LEDs and switch between different lighting patterns using button input, allowing me to explore how embedded systems combine software logic with physical hardware. The system was designed to implement patterns such as blinking, chasing, and sequential filling, with each pattern triggered through user interaction.",
+
+    "The process involved wiring multiple LEDs with resistors on a breadboard and connecting them to different GPIO pins on the ESP32. I also added a pushbutton input to switch between different modes. On the software side, I wrote embedded C++ code to define multiple lighting patterns and used timing logic through millis() instead of delay(), which is more efficient and closer to how real embedded systems are designed. I also implemented a simple state-based system where each button press changes the current pattern being displayed.",
+
+    "One of the biggest challenges I encountered was that only one LED was consistently functioning as expected, even though the code was written to control multiple LEDs. Initially, I suspected a bug in the pattern logic, but after debugging, I realized the issue was related to hardware constraints. The ESP32 does not treat all pins as general-purpose outputs, and some pins are reserved for internal functions or have special behavior during boot. Because of this, several of the pins I used did not behave reliably, which caused the system to only partially function.",
+
+    "This challenge highlighted an important aspect of embedded systems: debugging is not just about fixing code, but also understanding how hardware limitations impact system behavior. Even when the software logic is correct, incorrect assumptions about the hardware can lead to unexpected results. Through this process, I gained a much better understanding of GPIO pin behavior, breadboard wiring, and how microcontroller constraints affect design decisions.",
+
+    "Overall, this project helped me develop hands-on skills in breadboarding, microcontroller programming, and hardware-software debugging. It reinforced the importance of careful hardware selection and testing in embedded systems. If I were to continue this project, I would refine the pin selection, improve the wiring layout, and expand the system to include more advanced features such as PWM-based LED fading or RGB control."
+  ]
+},
 ];
 
 const sectionTitle = (eyebrow, title, description) => (
